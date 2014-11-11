@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title></title>
+    <link href="../carousel.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="http://cdn.alloyui.com/1.5.1/aui/aui-min.js"></script>
+
+    <script type="text/javascript" src="../carousel.js"></script>
+
+    <style>
+        #transition {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+    <body>
+        <h1>Responsive Carousel</h1>
+        <select id="transition">
+            <option value="default">Default</option>
+            <option value="slide">Slide</option>
+            <option value="press-away">Press Away</option>
+            <option value="soft-scale">Soft Scale</option>
+            <option value="snapin">Snap In</option>
+        </select>
+        <div class="carousel" id="demo">
+            <div class="carousel-item carousel-item-active">
+                <img src="./images/demo1.jpg" />
+            </div>
+            <div class="carousel-item">
+                <img src="./images/demo2.jpg" />
+            </div>
+            <div class="carousel-item">
+                <img src="./images/demo3.jpg" />
+            </div>
+            <div class="carousel-item">
+                <img src="./images/demo4.jpg" />
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            YUI().use('carousel', function(A) {
+                var zc = new A.Carousel({
+                    contentBox: '#demo',
+                    intervalTime: 2,
+                    itemSelector: '.carousel-item',
+                    transitionType: 'default'
+                }).render();
+
+                A.one('#transition').on('change', function(event) {
+                    var ct = event.currentTarget;
+
+                    zc.transitionType = ct.get('value');
+
+                    zc.render();
+                });
+            });
+        </script>
+    </body>
+</html>
