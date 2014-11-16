@@ -6,11 +6,6 @@
     width: 100%;
 }
 
-.carousel menu li {
-    display: inline-block;
-    float: none;
-}
-
 .carousel .carousel-item {
     opacity: 0;
     top: 0;
@@ -31,6 +26,7 @@
 
 .carousel-item img {
     max-width: 100%;
+    vertical-align: top;
 }
 
 .carousel-item-transition {
@@ -46,6 +42,10 @@
 
 /* Carousel Menu */
 
+.carousel-controls-container {
+    height: 0;
+}
+
 .carousel menu {
     background-color: transparent;
     bottom: auto;
@@ -53,6 +53,11 @@
     padding: 0;
     position: static;
     right: auto;
+}
+
+.carousel menu li {
+    display: inline-block;
+    float: none;
 }
 
 .carousel-menu-index-container {

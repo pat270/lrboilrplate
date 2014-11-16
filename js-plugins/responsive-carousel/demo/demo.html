@@ -1,7 +1,9 @@
 <html>
 <head>
     <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../carousel.css" rel="stylesheet" type="text/css" />
+    <link href="http://cdn.alloyui.com/2.0.0/aui-css/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="http://cdn.alloyui.com/1.5.1/aui/aui-min.js"></script>
 
@@ -15,7 +17,7 @@
 </head>
     <body>
         <h1>Responsive Carousel</h1>
-        <select id="transition">
+        <select id="transition" style="font-size: 16px;">
             <option value="default">Default</option>
             <option value="slide">Slide</option>
             <option value="press-away">Press Away</option>
@@ -41,6 +43,8 @@
             YUI().use('carousel', function(A) {
                 var zc = new A.Carousel({
                     contentBox: '#demo',
+                    controlsPrev: '<',
+                    controlsNext: '>',
                     intervalTime: 2,
                     itemSelector: '.carousel-item',
                     transitionType: 'default'

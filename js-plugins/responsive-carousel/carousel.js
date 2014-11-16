@@ -592,7 +592,7 @@ YUI.add('carousel', function(Y) {
             }
 
             var menu = Y.Node.create(
-                '<menu>'
+                '<menu class="carousel-controls-container">'
                 + '<li><a class="' + CSS_MENU_ITEM + ' ' + CSS_MENU_PLAY + '" href="">'
                 + instance.get('controlsPlay')
                 + '</a></li><li><a class="' + CSS_MENU_ITEM + ' ' + CSS_MENU_PAUSE + '" href="">'
